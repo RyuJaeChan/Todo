@@ -23,7 +23,7 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:properties/jdbc.properties")
-@EnableJpaRepositories(basePackages = "com.project.chat.repository")
+@EnableJpaRepositories(basePackages = "wintercoding.project.todo")
 public class DBConfig implements TransactionManagementConfigurer {
 	@Value("${spring.datasource.driver}")
 	private String driverClassName;
@@ -48,6 +48,7 @@ public class DBConfig implements TransactionManagementConfigurer {
 	public PlatformTransactionManager annotationDrivenTransactionManager() {
 		return new DataSourceTransactionManager(dataSource());
 	}
+	
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
 		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
@@ -61,8 +62,8 @@ public class DBConfig implements TransactionManagementConfigurer {
 		emfb.setJpaVendorAdapter(adapter);
 		emfb.setJpaProperties(props);
 		emfb.setDataSource(dataSource);
-		emfb.setPersistenceUnitName("todo");
-		emfb.setPackagesToScan("winterconding.project.todo");
+		emfb.setPersistenceUnitName("notDefault");
+		emfb.setPackagesToScan("wintercoding.project.todo");
 		return emfb;
 	}
 	

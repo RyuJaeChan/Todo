@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Controller;
 
 @Configuration
-@ComponentScan(basePackages = {"wintercondig.project.todo"}, excludeFilters = @Filter({Controller.class}))
+@ComponentScan(basePackages = {"wintercoding.project.todo"}, excludeFilters = @Filter({Controller.class}))
 @Import({DBConfig.class})
 public class ApplicationConfig {
 
