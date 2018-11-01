@@ -13,48 +13,132 @@
 <body>
     <header class="header">
         안녕ㅎ
+        
+        2018년 10월 - 11월
 
     </header>
 
     <div class="wrap">
         <div class="info_area">
-            <p>All</p>
-            <ul>
-                <li>놀기</li>
-            </ul>
-            <p>today</p>
-            <ul>
-                <li>먹기</li>
-            </ul>
-            <p>upcoming</p>
-            <ul>
-                <li>먹기</li>
-            </ul>
+            <div class="cal">
+                <div class="date">
+                    <span class="cal_date">2018년 10월</span>
+                    <div class="button_wrap">
+                        <span> ◀ </span>
+                        <span> ▶ </span>
+                    </div>
+                </div>
+                <table class="calendar">
+                    <tbody>
+                        <tr>
+                            <td>일</td>
+                            <td>월</td>
+                            <td>화</td>
+                            <td>수</td>
+                            <td>목</td>
+                            <td>금</td>
+                            <td>토</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="all">
+                <p>All</p>
+                <ul>
+                    <li>놀기</li>
+                </ul>
+            </div>
+            <div class="today">
+                <p>today</p>
+                <ul>
+                    <li>먹기</li>
+                </ul>
+            </div>
+            <div class="upcoming">
+                <p>upcoming</p>
+                <ul>
+                    <li>기타등등</li>
+                </ul>
+            </div>
         </div>
         <div class="cal_area">
             <table class="calendar">
                 <tbody>
-                <tr class="day_row">
-                    <td>일</td>
-                    <td>월</td>
-                    <td>화</td>
-                    <td>수</td>
-                    <td>목</td>
-                    <td>금</td>
-                    <td>토</td>
-                </tr>
-                
+                    <tr class="day_row">
+                        <td>일</td>
+                        <td>월</td>
+                        <td>화</td>
+                        <td>수</td>
+                        <td>목</td>
+                        <td>금</td>
+                        <td>토</td>
+                    </tr>
+                    <tr class="date_row">
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                    <div class="todo">weweg</div>
+                                    <div>weweg</div>
+                                    <div>weweg</div>
+                                    <div>weweg</div>
+                                    <div>weweg</div>
+                                    <div>weweg</div>
+                                    <div>weweg</div>
+                                    <div>weweg</div>
+                                    <div>weweg</div>
+                                    <div>weweg</div>
+                                </div>
+                            </div>
+                            
+                        </td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr class="date_row">
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr class="date_row">
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr class="date_row">
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
                 </tbody>
             </table>
-
-
-
         </div>
-
-
     </div>
 
+    <script type="template" id="dateTemplete">
+        <p class="date">11</p>
+        <div class="todo_element">
+            <span>첫번쨰</span>
+        </div>
+    </script>
 
+    <script src="../../resources/js/date-manage.js"></script>
     <script src="../../resources/js/calendar.js"></script>
     <script src="../../resources/js/main.js"></script>
 </body>

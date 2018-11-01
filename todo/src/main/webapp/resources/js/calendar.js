@@ -1,32 +1,39 @@
-let calendar = {
-    MAX_ROW: 6,
-    row: null,
-    cnt: 0,
-    addDateElement: function (type, table, startDate, maxDate) {
-        while (startDate <= maxDate) {
-            if (this.cnt % 7 == 0) {
-                this.row = table.insertRow();
-            }
-            let cell = this.row.insertCell();
-            cell.innerHTML = startDate++;
-            cell.className = type;
-            this.cnt++;
-        }
-    },
-    makeCalender: function (now) {
-        let table = document.querySelector(".calendar");
-
+let miniCalender = {
+    today: new Date(),
+    currentDay: null,
+    drawCalendar: function (table, date, line, setElement) {
         //초기화
         while (table.rows.length > 1) {
             table.deleteRow(table.rows.length - 1);
         }
+        
+        date.setDate(date.getDate() - date.getDay());
+    
+        let row;
+        let cnt = 0;
+        while(cnt < line * 7) {
+            if(cnt % 7 == 0) {
+               row = table.insertRow();
+            }
+            //insert element
+            let cell = row.insertCell();
+            cell.innerHTML = date.getDate();
+    
+            date.setDate(date.getDate()+1);
+            cnt++;
+        }
+    },
+}
 
-        let currMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
-        let prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+let calendar = {
+    today: new Date(),
+    currentDay: null,
+    dateElement: document.querySelector("date_template"),
 
-        let date = prevMonth.getDate() - prevMonth.getDay();
-        this.addDateElement("prev", table, date, prevMonth.getDate());
-        this.addDateElement("curr", table, 1, currMonth.getDate());
-        this.addDateElement("next", table, 1, 14 - (this.cnt % 7));
+    _formatTemplate: function(str, data) {
+        Object.keys(data).forEach((key) => {
+            str = replaceAll(str, "{" + key + "}", data[key]);
+        });
+        return str;
     }
 }

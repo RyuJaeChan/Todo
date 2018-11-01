@@ -32,6 +32,37 @@ html, body {
     border: 2px solid black;
 }
 
+.wrap .info_area .cal {
+    width: 100%;
+}
+
+.wrap .info_area .cal .date {
+    padding: 10px;
+}
+
+.wrap .info_area .cal .date .cal_date {
+    color: #757575;
+}
+
+.wrap .info_area .cal .date .button_wrap {
+    float: right;
+    margin-right: 15px;
+}
+
+.wrap .info_area .cal .calendar {
+    width: 100%;
+    text-align: center;
+}
+
+.wrap .info_area > div > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.wrap .info_area > div > p {
+    cursor: pointer;
+}
+
 .wrap .cal_area {
     width: calc(100% - 300px);
     height: 100%;
@@ -44,15 +75,29 @@ html, body {
     height: 100%;
 }
 
-.wrap .cal_area .calendar .day_row > td{
+.wrap .cal_area .calendar .day_row > td {
     background-color: var(--cal-dayrow-background-color);
     border: 1px solid black;
+    height: 20px;
     width: 14.28%;
 }
 
-.wrap .cal_area .calendar .prev{
-    background-color: blueviolet;
-    border: 1px solid blue;
-    font: red;
+.wrap .cal_area .calendar .date_row td {
+    background-color: azure;
+    border: 1px solid black;
+    vertical-align: top;
     width: 14.28%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.wrap .cal_area .calendar .date_row td .date_element {
+    height: 20px;
+    background-color: blue;
+    
+}
+
+
+.wrap .cal_area .calendar .date_row td .date{
+   margin: 0;
 }
