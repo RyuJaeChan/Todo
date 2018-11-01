@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -6,7 +9,7 @@
     <meta name="description" content="네이버 예약, 네이버 예약이 연동된 곳 어디서나 바로 예약하고, 네이버 예약 홈(나의예약)에서 모두 관리할 수 있습니다.">
     <title>Web Scheduler</title>
     <!-- link href="./css/style.css" rel="stylesheet" -->
-    <link href="../../resources/css/style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
 
 </head>
 
@@ -84,37 +87,8 @@
             </table>
         </div>
     </div>
-    <div class="background"></div>
-    <div class="popup">
-        <div>
-            <span>입력창</span>
-        </div>
-        <div>
-            <span>제목</span>
-        </div>
-        <div>
-            <input type="text" maxlength="32" name="name" placeholder="홍길동" required>
-        </div>
-        <div>
-            <span>날짜</span>
-        </div>
-        <div>
-            <input type="text" maxlength="32" name="name" placeholder="홍길동" required>
-        </div>
-        <div>
-            <span>내용</span>
-        </div>
-        <div>
-            <textarea></textarea>
-        </div>
-        <div>
-            <span>우선 순위를 선택하세요.</span>
-        </div>
 
 
-        <button class="submit_button">SUBMIT</button>
-        
-    </div>
     <!--
         <div class="date_element">
             <p class="date">11</p>
@@ -138,11 +112,10 @@
     </script>
 
 
-
-    <script src="../../resources/js/common/ajax.js"></script>
-    <script src="../../resources/js/common/util.js"></script>
-    <script src="../../resources/js/calendar.js"></script>
-    <script src="../../resources/js/main.js"></script>
+    <script src="./js/common/ajax.js?ver=1"></script>
+    <script src="./js/common/util.js?ver=1"></script>
+    <script src="./js/calendar.js?ver=1"></script>
+    <script src="./js/main.js?ver=1"></script>
 </body>
 
 </html>

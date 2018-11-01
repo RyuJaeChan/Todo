@@ -62,7 +62,7 @@ public class DBConfig implements TransactionManagementConfigurer {
 		emfb.setJpaVendorAdapter(adapter);
 		emfb.setJpaProperties(props);
 		emfb.setDataSource(dataSource);
-		emfb.setPersistenceUnitName("notDefault");
+		emfb.setPersistenceUnitName("todo");
 		emfb.setPackagesToScan("wintercoding.project.todo");
 		return emfb;
 	}

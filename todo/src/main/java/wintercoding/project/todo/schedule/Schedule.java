@@ -1,6 +1,6 @@
 package wintercoding.project.todo.schedule;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,10 +26,10 @@ public class Schedule {
 	private String description;
 
 	@Column(name = "create_date")
-	private LocalDateTime createDate;
+	private LocalDate createDate;
 
 	@Column(name = "modify_date")
-	private LocalDateTime modifyDate;
+	private LocalDate modifyDate;
 
 	@Column(name = "due_date")
 	private String dueDate;
