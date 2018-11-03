@@ -16,8 +16,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/font/**").addResourceLocations("/resources/font/")
-			.setCachePeriod(31556926);
 		registry.addResourceHandler("/css/**").addResourceLocations("/resources/css/")
 			.setCachePeriod(31556926);
 		registry.addResourceHandler("/img/**").addResourceLocations("/resources/img/")
@@ -28,7 +26,7 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("index");
+		registry.addViewController("/").setViewName("mainpage");
 	}
 
 	@Override

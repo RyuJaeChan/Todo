@@ -11,12 +11,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import lombok.Data;
-import lombok.Getter;
-
 @Entity
 @Table(name = "schedule")
-@Getter
 public class Schedule {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

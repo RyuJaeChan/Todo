@@ -65,7 +65,6 @@ let registerForm = {
             contentType: "application/json;charset=utf-8",
             data: data,
             success: function(response) {
-                console.log(response);
                 alert("완료되었습니다.");
                 registerForm.hidePopup();
                 mainCalendar.drawCalendar(new Date(data.date));
@@ -114,7 +113,6 @@ let infoForm = {
         }.bind(this));
     },
     showPopup: function(dataObject) {
-        console.log("?/??????????????");
         if(!dataObject) {
             //this.dateText.value = date.yyyy_mm_dd();
         }
@@ -194,8 +192,7 @@ let alertForm = {
             method: "GET",
             success: function (response) {
                 let resultJson = JSON.parse(response);
-                console.log(response.length);
-                if(response.length == 0) {
+                if(resultJson.length == 0) {
                     return;
                 }
 
@@ -203,8 +200,6 @@ let alertForm = {
                 let template = document.querySelector("#listTemplate").innerText;
 
                 let res = resultJson.map(function (val) {
-                    console.log("val : " + val.date);
-
                     data = {};
                     data.id = val.id;
                     data.title = val.title;
@@ -215,11 +210,6 @@ let alertForm = {
 
                     return val;
                 });
-                console.log("res :")
-                res.forEach(function (val) {
-                    console.log("v :" + val.id);
-                    console.log("v :" + val.alert);
-                });
 
                 requestAjax({
                     url: "./schedule",
@@ -227,7 +217,7 @@ let alertForm = {
                     contentType: "application/json;charset=utf-8",
                     data: res,
                     success: function (response) {
-                        console.log("put succ");
+                        //console.log("put succ");
                     }
                 });
                 alertForm.showPopup();

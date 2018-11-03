@@ -4,15 +4,11 @@ let mainCalendar = {
     dateElement: document.querySelector("#dateTemplete").innerText,
     startDate: null,
     initialize: function () {
-        console.log("mainCalendar init : ");
-
         this.drawCalendar(new Date());
         this.setEventListener();
     },
     setEventListener: function () {
-        console.log("add evt");
         this.table.addEventListener("click", function (evt) {
-            console.log("click! : " + evt.target.nodeName);
 
             if (evt.target.className == "todo") {
                 let id = evt.target.querySelector(".id").value;
@@ -22,7 +18,6 @@ let mainCalendar = {
                     method: "GET",
                     success: function (response) {
                         let resultJson = JSON.parse(response);
-                        console.log(response);
 
                         data = {};
                         data.id = resultJson.id;
@@ -58,9 +53,6 @@ let mainCalendar = {
         this.setDateText(temp);
         let s = new Date(date);
         this.startDate = new Date(date);
-
-
-        console.log("ss : " + this.startDate);
 
         miniCalendar.markDate(s);
 
@@ -214,9 +206,6 @@ let miniCalendar = {
         let temp = new Date(date);
         let dt = new Date(this.displayDate);
         
-
-        console.log("mark dae : " + temp);
-        console.log("mark dt : " + dt);
         let cnt = 0;
         while(cnt < 42) {
             let td = document.querySelector(".info_area .cal .calendar .id_" + dt.yyyymmdd());
