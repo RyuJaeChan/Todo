@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div class="title">
-            Todo
+            <span>Todo List</span>
         </div>
         <div class="date_wrap">
             <span class="date"> 2018년 11월 - 12월</span>
@@ -22,7 +22,6 @@
                 <div class="nextButton"><span> ▶ </span></div>
             </div>
         </div>
-        <button class="test"> TEst Buttnon </button>
     </header>
 
     <div class="wrap">
@@ -31,7 +30,7 @@
                 <div class="date">
                     <span class="cal_date"> </span>
                     <div class="button_wrap">
-                        <div class="prevButton"><span> ◀ </span></div>
+                        <div class="prevButton"><span> ◀</span></div>
                         <div class="nextButton"><span> ▶ </span></div>
                     </div>
                 </div>
@@ -50,12 +49,16 @@
                 </table>
             </div>
             <div class="all">
-                <p>All</p>
-                <ul>
-                    <li>놀기</li>
-                </ul>
+                <div class="head">
+                    <span>All</span>
+                </div>
+                <div class="list">
+                    <div class="element" data-id="13513">
+                        111111111111111111111111111111111111
+                    </div>
+                </div>
             </div>
-            <div class="today">
+            <!--div class="today">
                 <p>today</p>
                 <ul>
                     <li>먹기</li>
@@ -66,7 +69,7 @@
                 <ul>
                     <li>기타등등</li>
                 </ul>
-            </div>
+            </div-->
         </div>
         <div class="cal_area">
             <table class="calendar">
@@ -80,40 +83,331 @@
                         <td>금</td>
                         <td>토</td>
                     </tr>
+                    <tr class="date_row">
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                    <div class="todo">
+                                        <span>111</span>
+                                    </div>
+                                    <div class="todo">222</div>
+                                    <div class="todo">333</div>
+                                    <div class="todo">444</div>
+                                    <div class="todo">555</div>
+                                    <div class="todo">666</div>
+                                    <div class="more">더보기</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="date_row">
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                    <div class="todo">
+                                    </div>
+                                    <div class="todo">222</div>
+                                    <div class="todo">333</div>
+                                    <div class="todo">444</div>
+                                    <div class="todo">555</div>
+                                    <div class="todo">666</div>
+                                    <div class="more">더보기</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="date_row">
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                    <div class="todo">111</div>
+                                    <div class="todo">222</div>
+                                    <div class="todo">333</div>
+                                    <div class="todo">444</div>
+                                    <div class="todo">555</div>
+                                    <div class="todo">666</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="date_row">
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                    <div class="todo">111</div>
+                                    <div class="todo">222</div>
+                                    <div class="todo">333</div>
+                                    <div class="todo">444</div>
+                                    <div class="todo">555</div>
+                                    <div class="todo">666</div>
+                                    <div class="more">더보기</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="date_element">
+                                <p class="date">11</p>
+                                <div class="todo_list">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
                 </tbody>
             </table>
         </div>
     </div>
     <div class="background"></div>
-    <div class="popup">
-        <div>
-            <span>입력창</span>
+    <div class="register_form">
+        <img class="close_button" src="../../resources/img/close.png" width="24" height="24">
+        <div class="from_wrap">
+            <div class="title_bar">
+                <span>입력</span>
+            </div>
+            <div class="form">
+                <input type="hidden" class="id" value="">
+                <div>
+                    <span>제목</span>
+                </div>
+                <div>
+                    <input type="text" class="title" maxlength="32" name="title" placeholder="제목" required>
+                </div>
+                <div>
+                    <span>날짜</span>
+                </div>
+                <div>
+                    <input type="text" class="date_text" maxlength="32" name="date" placeholder="yyyy-mm-dd" required>
+                </div>
+                <div>
+                    <span>내용</span>
+                </div>
+                <div>
+                    <textarea class="description"></textarea>
+                </div>
+                <div>
+                    <span>우선 순위를 선택하세요.</span>
+                </div>
+                <div class="checkbox">
+                    <ul>
+                        <li><input type="radio" name="priority" value="1" checked="true" required>1 </input> </li>
+                        <li><input type="radio" name="priority" value="2">2</input></li>
+                        <li><input type="radio" name="priority" value="3">3</input></li>
+                        <li><input type="radio" name="priority" value="4">4</input></li>
+                        <li><input type="radio" name="priority" value="5">5</input></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button_area">
+                <button class="submit_button">SUBMIT</button>
+            </div>
         </div>
-        <div>
-            <span>제목</span>
+    </div>
+    <div class="info_form">
+        <img class="close_button" src="../../resources/img/close.png" width="24" height="24">
+        <div class="form_wrap">
+            <div class="title_bar">
+                <span>지난 일정</span>
+            </div>
+            <div class="form">
+                <input type="hidden" class="id" value="">
+                <div>
+                    제목 : <span class="title">제목</span>
+                </div>
+                <div>
+                    <span>날짜 : </span> <span class="date">2018-11-05</span>
+                </div>
+                <div>
+                    <span>우선 순위 : </span><span class="priority">3</span>
+                </div>
+                <div>
+                    <span>내용</span>
+                </div>
+                <div>
+                    <span class="description">이러저러그러한거</span>
+                </div>
+            </div>
+            <div class="button_area">
+                <button class="modify_button">수정</button>
+            </div>
         </div>
-        <div>
-            <input type="text" maxlength="32" name="name" placeholder="홍길동" required>
+    </div>
+    <div class="alert_form">
+        <img class="close_button" src="../../resources/img/close.png" width="24" height="24">
+        <div class="form_wrap">
+            <div class="title_bar">
+                <span>종료된 일정</span>
+            </div>
+            <div class="list">
+                <div class="element" data-id="{id}">
+                    {title}
+                </div>
+            </div>
         </div>
-        <div>
-            <span>날짜</span>
-        </div>
-        <div>
-            <input type="text" maxlength="32" name="name" placeholder="홍길동" required>
-        </div>
-        <div>
-            <span>내용</span>
-        </div>
-        <div>
-            <textarea></textarea>
-        </div>
-        <div>
-            <span>우선 순위를 선택하세요.</span>
-        </div>
-
-
-        <button class="submit_button">SUBMIT</button>
-        
     </div>
     <!--
         <div class="date_element">
@@ -136,11 +430,22 @@
             </div>
         </div>
     </script>
-
+    <script type="template" id="scheduleTemplate">
+            <div class="todo">
+                <input type="hidden" value="{id}">
+                {title}
+            </div>
+    </script>
+    <script type="template" id="listTemplate">
+            <div class="element">
+                <span class="title" data-id="{id}">{title}</span>
+            </div>
+    </script>
 
 
     <script src="../../resources/js/common/ajax.js"></script>
     <script src="../../resources/js/common/util.js"></script>
+    <script src="../../resources/js/popup.js"></script>
     <script src="../../resources/js/calendar.js"></script>
     <script src="../../resources/js/main.js"></script>
 </body>

@@ -2,10 +2,12 @@
 @charset "UTF-8";
 
 :root {
-    --header-background-color: #9e9e9e;
+    --header-background-color: #212121;
     --info-area-background-color: #fafafa;
     --cal-area-background-color: #f5f5f5;
-    --cal-dayrow-background-color: #757575;
+    --cal-dayrow-background-color: #424242;
+    --cal-date-background-color: #fafafa;
+    --cal-todo-background-color: #616161;
 }
 
 html, body {
@@ -13,7 +15,6 @@ html, body {
     height: 800px;
     width: 1280px;
 }
-
 
 .header {
     height: 50px;
@@ -26,14 +27,30 @@ html, body {
 
 .header .title {
     width: 300px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.header .date_wrap .date {
+    color: #ffffff;
+    line-height: 50px;
+    margin-left: 30px;
 }
 
 .header .date_wrap .button_wrap {
     float: right;
+    margin-left: 10px;
+    color: #ffffff;
+    line-height: 50px;
+    font-size: 20px;
 }
 
 .header .date_wrap .button_wrap > div {
     float: left;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 .wrap {
@@ -52,6 +69,7 @@ html, body {
 
 .wrap .info_area .cal {
     width: 100%;
+    height: 220px;
 }
 
 .wrap .info_area .cal .date {
@@ -78,21 +96,53 @@ html, body {
     text-align: center;
 }
 
-.wrap .info_area .cal .calendar td {
+.mark_date {
+    background-color: #e0e0e0;
+}
+
+.wrap .info_area .cal .calendar .date_row td:hover {
     cursor: pointer;
+    background-color: #bdbdbd;
 }
 
-.wrap .info_area .cal .calendar td:hover {
-    background-color: yellow;
+.wrap .info_area .all {
+    margin-top: 20px;
+    height: 580px;
 }
 
-.wrap .info_area > div > ul {
-    list-style: none;
-    padding: 0;
+.wrap .info_area .all .head {
+    background-color: #757575;
+    color: #ffffff;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
-.wrap .info_area > div > p {
+.wrap .info_area .all .list {
+    margin: 5px;
+    overflow-y: auto;
+    height: 500px;
+}
+
+.wrap .info_area .all .list .element {
+    margin-bottom: 3px;
+    height: 25px;
+    line-height: 25px;
+    width: 288px;
     cursor: pointer;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+.wrap .info_area .all .list .element .title {
+    width: 280px;
+    
+}
+
+.wrap .info_area .all .list .element:hover {
+    background-color: #e0e0e0
 }
 
 .wrap .cal_area {
@@ -107,16 +157,21 @@ html, body {
     height: 100%;
 }
 
+.wrap .cal_area .calendar .day_row {
+    color: #ffffff;
+    text-align: center;
+}
+
 .wrap .cal_area .calendar .day_row td {
     background-color: var(--cal-dayrow-background-color);
-    border: 1px solid black;
+    border-radius: 5px;
     height: 10px;
     width: 14.28%;
 }
 
 .wrap .cal_area .calendar .date_row td {
-    background-color: azure;
-    border: 1px solid black;
+    background-color: var(--cal-date-background-color);
+    border: 1px solid #e0e0e0;
     vertical-align: top;
     width: 14.28%;
     height: 135px;
@@ -131,27 +186,138 @@ html, body {
     font-size: 15px;
 }
 
-.wrap .cal_area .calendar .date_row td .date_element .todo_list .todo{
-    background-color: red;
+.wrap .cal_area .calendar .date_row td .date_element .todo_list .todo {
+    background-color: var(--cal-todo-background-color);
+    color: #ffffff;
+    border-radius: 3px;
     margin: 3px;
+    width: 122px;
+    cursor: pointer;
+    overflow:hidden;
+    text-overflow: ellipsis;
 }
 
 .wrap .cal_area .calendar .date_row td .date {
    margin: 0;
 }
 
-.popup {
+.register_form {
+    border-radius: 5px;
+    display: none;
     position: absolute;
-    height: 500px;
-    width: 300px;
+    width: 350px;
+    height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     background-color: #ffffff;
+    padding: 5px;
+}
+
+.register_form .from_wrap {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.register_form .close_button {
+    cursor: pointer;
+    float: right;
+}
+
+.register_form .from_wrap .title_bar {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.register_form .from_wrap .form > div {
+    margin-bottom: 5px;
+}
+
+.register_form .from_wrap .form > div > input {
+    width: 100%;
+}
+
+.register_form .from_wrap .form > div > span {
+    font-size: 20px;
+}
+
+.register_form .from_wrap .form > div > textarea {
+    font-size: 20px;
+}
+
+.register_form .from_wrap .form .checkbox ul {
+    list-style: none;
+    padding-left: 0px;
+    overflow: hidden;
+}
+
+.register_form .from_wrap .form .checkbox > ul > li {
+    float: left;
+    margin-right: 20px;
+}
+
+.register_form .from_wrap .button_area {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.register_form .from_wrap .button_area .submit_button {
+    height: 30px;
+}
+
+.info_form {
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.info_form .from_wrap {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.info_form .close_button {
+    cursor: pointer;
+    float: right;
+}
+
+.info_form .form_wrap .title_bar {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.info_form .form_wrap .form div {
+    font-size: 20px;
+}
+
+.info_form .form_wrap .button_area {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.info_form .form_wrap .button_area .modify_button {
+    height: 30px;
 }
 
 .background {
+    display: none;
     max-width: 100%;
     max-height: 100%;
     bottom: 0;
@@ -163,4 +329,50 @@ html, body {
     top: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.38);
+}
+
+.alert_form {
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.alert_form .from_wrap {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.alert_form .close_button {
+    cursor: pointer;
+    float: right;
+}
+
+.alert_form .form_wrap .title_bar {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.alert_form .form_wrap .list {
+    height: 350px;
+    overflow-y: auto;
+}
+
+.alert_form .form_wrap .list .element {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.alert_form .form_wrap .list .element:hover {
+    background-color: #e0e0e0
 }
