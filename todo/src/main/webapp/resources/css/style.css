@@ -178,6 +178,10 @@ html, body {
     overflow: hidden;
 }
 
+.wrap .cal_area .calendar .date_row td:hover {
+    background-color: #bdbdbd;
+}
+
 .wrap .cal_area .calendar .date_row td .date_element {
     height: 0px;
 }
@@ -369,10 +373,10 @@ html, body {
 
 .alert_form .form_wrap .list .element {
     font-size: 20px;
-    cursor: pointer;
+    1cursor: pointer;
     margin: 5px;
 }
 
 .alert_form .form_wrap .list .element:hover {
-    background-color: #e0e0e0
+    1background-color: #e0e0e0
 }

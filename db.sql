@@ -1,0 +1,13 @@
+CREATE SCHEMA `todo` DEFAULT CHARACTER SET utf8 ;
+
+CREATE TABLE `todo`.`schedule` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(32) CHARACTER SET 'utf8' NOT NULL,
+  `description` VARCHAR(128) CHARACTER SET 'utf8' NOT NULL,
+  `date` DATETIME NOT NULL,
+  `priority` INT NOT NULL,
+  `alert` TINYINT(1) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COMMENT = 'schedule';

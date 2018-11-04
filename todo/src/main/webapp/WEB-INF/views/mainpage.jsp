@@ -133,7 +133,7 @@
         </div>
     </div>
     <div class="alert_form">
-            <img class="close_button" src="../../resources/img/close.png" width="24" height="24">
+            <img class="close_button" src="./img/close.png" width="24" height="24">
             <div class="form_wrap">
                 <div class="title_bar">
                     <span>종료된 일정</span>
@@ -172,6 +172,7 @@
             </div>
         </div>
     </div>
+    
 
     <!--
         <div class="date_element">

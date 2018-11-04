@@ -264,6 +264,7 @@ let todoList = {
         }.bind(this));
     },
     updateList: function() {
+        this.list.innerHTML = "";
         requestAjax({
             url: "./schedule",
             method: "GET",
